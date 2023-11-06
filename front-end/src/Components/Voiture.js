@@ -6,7 +6,6 @@ import axios from 'axios';
 import MyToastt from './MyToastt';
 
 
-
 class Voiture extends React.Component {
 
   constructor(props) {
@@ -34,7 +33,7 @@ class Voiture extends React.Component {
       [event.target.name]: event.target.value
     });
   }
-
+  
   handleSubmit = (event) => {
     event.preventDefault();
     const voiture = {
@@ -59,6 +58,8 @@ class Voiture extends React.Component {
         setTimeout(() => this.setState({"show":false}), 3000);
       }
     })
+
+ 
   }
   render(){
   return (
@@ -115,6 +116,5 @@ class Voiture extends React.Component {
   );
   }
 }
-
 
 export default Voiture;

@@ -44,7 +44,7 @@ class VoitureListe extends React.Component {
             <div>
                 <div style={{"display":this.state.show ? "block" : "none"}}>
                     <MyToastt children={{show:this.state.show, message:"Voiture supprimee avec succes", type:"danger"}} />
-                    </div>
+                </div>
            <Card className={"border border-dark bg-dark text-white"}>
                 <Card.Header><FontAwesomeIcon icon={faList} />Liste Voitures</Card.Header>
                 <Card.Body>
@@ -76,7 +76,7 @@ class VoitureListe extends React.Component {
                                     <td>{voiture.prix}</td>
                                     <td>
                                         <ButtonGroup>
-                                            <Link to={"edit/"+voiture.id} className="btn btn-sm btn-outline-primary"><FontAwesomeIcon icon={faEdit} /></Link>{' '}
+                                            <Link to={'/edit/'+voiture.id} className="btn btn-sm btn-outline-primary"><FontAwesomeIcon icon={faEdit} /></Link>{' '}
                                             <Button size="sm" variant="outline-danger" onClick={this.deleteVoiture.bind(this, voiture.id)}><FontAwesomeIcon icon={faTrash} /></Button>
                                         </ButtonGroup>
                                     </td>
